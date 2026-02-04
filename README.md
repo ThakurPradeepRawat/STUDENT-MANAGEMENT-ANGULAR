@@ -1,59 +1,97 @@
-# App
+# 🎓 Student Management System – Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+A modern **Student Management System frontend** built using **Angular**, focused on clean architecture, reusable components, form validation, and seamless API integration.  
+This project is designed to simulate a **real-world enterprise application** used in educational institutions.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
+
+- ➕ Add new students
+- ✏️ Update student details
+- ❌ Delete students
+- 📋 View student list
+- 📂 Bulk student upload via Excel
+- ⚠️ Client-side form validation (email, mobile, name, DOB, etc.)
+- 📤 Download invalid records after bulk upload
+- 🔄 API integration using Angular services
+- ♻️ Reusable components & shared services
+- 📁 Clean folder structure (scalable)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Angular, TypeScript
+- **UI**: HTML5, CSS3, Angular Material
+- **Forms**: Reactive Forms
+- **API Communication**: HttpClient
+- **Validation**: Custom Validators & Regex
+- **Version Control**: Git & GitHub
+
+---
+## 📂 Project Structure
+
+src/
+├── app/
+│ ├── core/
+│ │ ├── services/
+│ │ └── models/
+│ ├── shared/
+│ │ ├── components/
+│ │ ├── validators/
+│ │ └── utils/
+│ ├── students/
+│ │ ├── add-student/
+│ │ ├── update-student/
+│ │ ├── student-list/
+│ │ └── bulk-upload/
+│ └── app.module.ts
+├── environments/
+└── assets/
+
+---
+
+## 📋 Form Validations Implemented
+
+- ✅ Email format validation
+- ✅ Mobile number validation
+- ✅ Name character validation
+- ✅ Date of Birth format validation
+- ✅ Required field checks
+- ✅ Duplicate detection (via API)
+
+---
+
+## 🔁 Bulk Upload Flow
+
+1. Upload Excel file
+2. Data sent to backend API
+3. Invalid records identified
+4. Errors returned with exact column issues
+5. User can download invalid data in Excel format
+
+---
+
+## 🔌 Backend Integration
+
+- REST API based communication
+- Uses Angular **Services** for all HTTP calls
+- Environment-based API URLs
+
+---
+
+## ⚙️ Setup & Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/ThakurPradeepRawat/STUDENT-MANAGEMENT-ANGULAR.git
+
+# Navigate to project folder
+cd student-management-angular
+
+# Install dependencies
+npm install
+
+# Run the application
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
