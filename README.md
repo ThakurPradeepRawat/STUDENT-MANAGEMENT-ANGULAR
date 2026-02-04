@@ -32,25 +32,24 @@ This project is designed to simulate a **real-world enterprise application** use
 ---
 ## 📂 Project Structure
 
-src/
-├── app/
-│ ├── core/
-│ │ ├── services/
-│ │ └── models/
-│ ├── shared/
-│ │ ├── components/
-│ │ ├── validators/
-│ │ └── utils/
-│ ├── students/
-│ │ ├── add-student/
-│ │ ├── update-student/
-│ │ ├── student-list/
-│ │ └── bulk-upload/
-│ └── app.module.ts
-├── environments/
-└── assets/
+- src/
+- ├── app/
+- │ ├── core/
+- │ │ ├── services/
+- │ │ └── models/
+- │ ├── shared/
+- │ │ ├── components/
+- │ │ ├── validators/
+- │ │ └── utils/
+- │ ├── students/
+- │ │ ├── add-student/
+- │ │ ├── update-student/
+- │ │ ├── student-list/
+- │ │ └── bulk-upload/
+- │ └── app.module.ts
+- ├── environments/
+- └── assets/
 
----
 
 ## 📋 Form Validations Implemented
 
