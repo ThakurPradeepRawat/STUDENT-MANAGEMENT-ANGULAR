@@ -11,7 +11,13 @@ export class AuthService {
   constructor(private http : HttpClient){};
   Login(Email : any , Password : any) : Observable<any>
   {
-    return this.http.post<any[]>(this.apiurl +"/auth/login" ,{Email , Password}).pipe(
+    return this.http.post<any[]>(this.apiurl +"/auth/login" ,{Email , Password}, {withCredentials : true}).pipe(
+      catchError(this.LoginErrorHandle)
+    )
+  };
+  Ragister(Email : any , Password : any) : Observable<any>
+  {
+    return this.http.post<any[]>(this.apiurl +"/auth/Ragister" ,{Email , Password}).pipe(
       catchError(this.LoginErrorHandle)
     )
   };
