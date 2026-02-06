@@ -15,9 +15,16 @@ export class AuthService {
       catchError(this.LoginErrorHandle)
     )
   };
-  Ragister(Email : any , Password : any) : Observable<any>
+  Register(Email : any , Password : any) : Observable<any>
   {
-    return this.http.post<any[]>(this.apiurl +"/auth/Ragister" ,{Email , Password}).pipe(
+    return this.http.post<any[]>(this.apiurl +"/auth/Register" ,{Email , Password}).pipe(
+      catchError(this.LoginErrorHandle)
+    )
+  };
+
+  Refresh(): Observable<any>
+  {
+    return this.http.post<any[]>(this.apiurl+"/auth/Refresh" , {} , {withCredentials : true}).pipe(
       catchError(this.LoginErrorHandle)
     )
   };

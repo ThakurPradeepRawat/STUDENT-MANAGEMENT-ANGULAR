@@ -22,8 +22,8 @@ export class Login {
       }
     );
     }
-  Ragister(){
-    this.authService.Ragister(this.Email , this.Password).subscribe((res)=>{
+  Register(){
+    this.authService.Register(this.Email , this.Password).subscribe((res)=>{
         console.log("Ragistration Succesfull")
     })
   }
